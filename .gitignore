@@ -1,0 +1,60 @@
+## Ignore Visual Studio and build artifacts
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Ignore build results
+bin/
+obj/
+Debug/
+Release/
+out/
+
+## Ignore Rider-specific files
+.idea/
+*.sln.iml
+
+## Ignore .NET-specific artifacts
+project.lock.json
+project.fragment.lock.json
+*.dbmdl
+*.bak
+*.backup
+*.log
+
+## Ignore EF Core tools output
+Migrations/
+*.sqlite
+*.mdf
+*.ldf
+
+## ASP.NET Core secrets
+**/secrets.json
+
+## Ignore test results
+TestResults/
+*.trx
+
+## Ignore user-specific files
+*.swp
+*.psess
+*.vsp
+*.vspx
+*.ncb
+*.opendb
+*.pidb
+*.sdf
+
+## Ignore temp & cache files
+*.tmp
+*.temp
+*.cache
+*.DS_Store
+Thumbs.db
+
+## Ignore global config override
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.Secrets.json

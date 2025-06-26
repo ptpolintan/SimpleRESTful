@@ -1,0 +1,6 @@
+@SimpleRESTful_HostAddress = http://localhost:5168
+
+GET {{SimpleRESTful_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
