@@ -1,4 +1,4 @@
-﻿namespace SimpleRESTful.Application.DTOs.Response
+﻿namespace SimpleRESTful.Application.Employees.DTOs.Response
 {
     public class Response
     {

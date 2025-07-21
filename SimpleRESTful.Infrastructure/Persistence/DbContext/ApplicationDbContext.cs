@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SimpleRESTful.Domain.Entities;
+using SimpleRESTful.Domain.Employees.Entities;
 
-namespace SimpleRESTful.Infrastructure.DbContext
+namespace SimpleRESTful.Infrastructure.Persistence.DbContext
 {
     public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : Microsoft.EntityFrameworkCore.DbContext(options)
     {

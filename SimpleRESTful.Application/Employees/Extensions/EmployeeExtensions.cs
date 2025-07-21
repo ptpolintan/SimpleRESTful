@@ -1,14 +1,14 @@
-﻿using SimpleRESTful.Application.DTOs;
-using SimpleRESTful.Application.DTOs.Request;
-using SimpleRESTful.Domain.Entities;
+﻿using SimpleRESTful.Application.Employees.DTOs;
+using SimpleRESTful.Application.Employees.DTOs.Request;
+using SimpleRESTful.Domain.Employees.Entities;
 
-namespace SimpleRESTful.Application.Extensions
+namespace SimpleRESTful.Application.Employees.Extensions
 {
     public static class EmployeeExtensions
     {
-        public static EmployeeDTO AsDTO(this Employee entity)
+        public static EmployeeModel AsDTO(this Employee entity)
         {
-            return new EmployeeDTO
+            return new EmployeeModel
             {
                 Id = entity.Id,
                 FirstName = entity.FirstName,
@@ -17,12 +17,12 @@ namespace SimpleRESTful.Application.Extensions
             };
         }
 
-        public static IEnumerable<EmployeeDTO>? AsDTOs(this IEnumerable<Employee> entities)
+        public static IEnumerable<EmployeeModel>? AsDTOs(this IEnumerable<Employee> entities)
         {
             return entities.Select(x => x.AsDTO());
         }
 
-        public static Employee AsEntity(this UpdateEmployeeRequestDTO request)
+        public static Employee AsEntity(this UpdateEmployeeRequest request)
         {
             return new Employee
             {
@@ -32,7 +32,7 @@ namespace SimpleRESTful.Application.Extensions
                 MiddleName = request.MiddleName
             };
         }
-        public static Employee AsEntity(this CreateEmployeeRequestDTO request)
+        public static Employee AsEntity(this CreateEmployeeRequest request)
         {
             return new Employee
             {

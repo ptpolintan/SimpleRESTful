@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SimpleRESTful.API.DTOs.Request;
-using SimpleRESTful.Application.DTOs.Response;
+using SimpleRESTful.API.DTOs.WebRequest;
+using SimpleRESTful.Application.Employees.DTOs.Request;
+using SimpleRESTful.Application.Employees.DTOs.Response;
 
 namespace SimpleRESTful.API.Extensions
 {
@@ -57,9 +58,9 @@ namespace SimpleRESTful.API.Extensions
             };
         }
 
-        public static Application.DTOs.Request.UpdateEmployeeRequestDTO AsDTO(this UpdateEmployeeRequestDTO request)
+        public static UpdateEmployeeRequest AsDTO(this UpdateEmployeeWebRequest request)
         {
-            return new Application.DTOs.Request.UpdateEmployeeRequestDTO
+            return new UpdateEmployeeRequest
             {
                 Id = request.Id,
                 FirstName = request.FirstName,
@@ -67,9 +68,9 @@ namespace SimpleRESTful.API.Extensions
                 MiddleName = request.MiddleName
             };
         }
-        public static Application.DTOs.Request.CreateEmployeeRequestDTO AsDTO(this CreateEmployeeRequestDTO request)
+        public static CreateEmployeeRequest AsDTO(this CreateEmployeeWebRequest request)
         {
-            return new Application.DTOs.Request.CreateEmployeeRequestDTO
+            return new CreateEmployeeRequest
             {
                 FirstName = request.FirstName,
                 LastName = request.LastName,

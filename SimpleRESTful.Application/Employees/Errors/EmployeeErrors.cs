@@ -1,4 +1,4 @@
-﻿namespace SimpleRESTful.Application.Errors
+﻿namespace SimpleRESTful.Application.Employees.Errors
 {
     public static class EmployeeErrors
     {

@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SimpleRESTful.Domain.Entities;
-using SimpleRESTful.Infrastructure.DbContext;
-using SimpleRESTful.Infrastructure.Repositories.Interfaces;
+using SimpleRESTful.Domain.Employees.Entities;
+using SimpleRESTful.Domain.Employees.Repository;
+using SimpleRESTful.Infrastructure.Persistence.DbContext;
 
-namespace SimpleRESTful.Infrastructure.Repositories
+namespace SimpleRESTful.Infrastructure.Persistence.Repositories
 {
     public class EmployeeRepository : IEmployeeRepository
     {

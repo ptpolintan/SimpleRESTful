@@ -1,11 +1,11 @@
-﻿using SimpleRESTful.Application.DTOs.Request;
-using SimpleRESTful.Application.DTOs.Response;
-using SimpleRESTful.Application.Errors;
-using SimpleRESTful.Application.Extensions;
-using SimpleRESTful.Application.Services.Interfaces;
-using SimpleRESTful.Infrastructure.Repositories.Interfaces;
+﻿using SimpleRESTful.Application.Employees.DTOs.Request;
+using SimpleRESTful.Application.Employees.DTOs.Response;
+using SimpleRESTful.Application.Employees.Errors;
+using SimpleRESTful.Application.Employees.Extensions;
+using SimpleRESTful.Application.Employees.Interfaces;
+using SimpleRESTful.Domain.Employees.Repository;
 
-namespace SimpleRESTful.Application.Services
+namespace SimpleRESTful.Application.Employees.Services
 {
     public class EmployeeService : IEmployeeService
     {
@@ -16,13 +16,13 @@ namespace SimpleRESTful.Application.Services
             this.service = service;
         }
 
-        public async Task<CreateEmployeeResponseDTO> CreateEmployeeAsync(CreateEmployeeRequestDTO request)
+        public async Task<CreateEmployeeResponseDTO> CreateEmployeeAsync(CreateEmployeeRequest request)
         {
             var response = new CreateEmployeeResponseDTO();
 
             try
             {
-                var result = await this.service.InsertAsync(request.AsEntity());
+                var result = await service.InsertAsync(request.AsEntity());
 
                 if (result is null)
                 {
@@ -45,7 +45,7 @@ namespace SimpleRESTful.Application.Services
 
             try
             {
-                var result = await this.service.DeleteAsync(id);
+                var result = await service.DeleteAsync(id);
 
                 if (!result)
                 {
@@ -66,7 +66,7 @@ namespace SimpleRESTful.Application.Services
 
             try
             {
-                var dto = (await this.service.GetByIdAsync(id))?.AsDTO();
+                var dto = (await service.GetByIdAsync(id))?.AsDTO();
 
                 if (dto is not null)
                 {
@@ -91,7 +91,7 @@ namespace SimpleRESTful.Application.Services
 
             try
             {
-                response.Data = (await this.service.GetAllAsync())?.AsDTOs();
+                response.Data = (await service.GetAllAsync())?.AsDTOs();
 
             }
             catch (Exception)
@@ -101,13 +101,13 @@ namespace SimpleRESTful.Application.Services
             return response;
         }
 
-        public async Task<UpdateEmployeeResponseDTO> UpdateEmployeeAsync(UpdateEmployeeRequestDTO request)
+        public async Task<UpdateEmployeeResponseDTO> UpdateEmployeeAsync(UpdateEmployeeRequest request)
         {
             var response = new UpdateEmployeeResponseDTO();
 
             try
             {
-                var result = await this.service.UpdateAsync(request.AsEntity());
+                var result = await service.UpdateAsync(request.AsEntity());
 
                 if (result is null)
                 {

@@ -1,9 +1,9 @@
-using SimpleRESTful.Infrastructure.DbContext;
-using SimpleRESTful.Infrastructure.Repositories;
-using SimpleRESTful.Infrastructure.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using SimpleRESTful.Application.Services.Interfaces;
-using SimpleRESTful.Application.Services;
+using SimpleRESTful.Domain.Employees.Repository;
+using SimpleRESTful.Application.Employees.Services;
+using SimpleRESTful.Application.Employees.Interfaces;
+using SimpleRESTful.Infrastructure.Persistence.DbContext;
+using SimpleRESTful.Infrastructure.Persistence.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 var x = builder.Configuration.GetConnectionString("MSSQL");

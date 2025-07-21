@@ -1,6 +1,6 @@
-﻿using SimpleRESTful.Domain.Entities;
+﻿using SimpleRESTful.Domain.Employees.Entities;
 
-namespace SimpleRESTful.Infrastructure.Repositories.Interfaces
+namespace SimpleRESTful.Domain.Employees.Repository
 {
     public interface IEmployeeRepository
     {

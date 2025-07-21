@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using SimpleRESTful.API.DTOs.Request;
+using SimpleRESTful.API.DTOs.WebRequest;
 using SimpleRESTful.API.Extensions;
-using SimpleRESTful.Application.Services.Interfaces;
+using SimpleRESTful.Application.Employees.Interfaces;
 
 namespace SimpleRESTful.API.Controllers
 {
@@ -29,15 +29,15 @@ namespace SimpleRESTful.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateEmployee([FromBody] CreateEmployeeRequestDTO request)
+        public async Task<IActionResult> CreateEmployee([FromBody] CreateEmployeeWebRequest request)
         {
             return (await this.service.CreateEmployeeAsync(request.AsDTO())).AsHttpResponse();
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateEmployees([FromRoute] int id, [FromBody] UpdateEmployeeRequestDTO body)
+        public async Task<IActionResult> UpdateEmployees([FromRoute] int id, [FromBody] UpdateEmployeeWebRequest body)
         {
-            var request = new UpdateEmployeeRequestDTO
+            var request = new UpdateEmployeeWebRequest
             {
                 Id = id,
                 FirstName = body.FirstName,

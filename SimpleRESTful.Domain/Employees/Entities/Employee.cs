@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SimpleRESTful.Domain.Entities
+namespace SimpleRESTful.Domain.Employees.Entities
 {
     public class Employee
     {

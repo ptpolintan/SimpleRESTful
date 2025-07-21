@@ -1,6 +1,8 @@
-﻿namespace SimpleRESTful.Application.DTOs.Request
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace SimpleRESTful.API.DTOs.WebRequest
 {
-    public class UpdateEmployeeRequestDTO
+    public class UpdateEmployeeWebRequest
     {
         public int Id { get; set; }
         public required string FirstName { get; set; }
