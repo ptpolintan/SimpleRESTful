@@ -11,6 +11,7 @@ obj/
 Debug/
 Release/
 out/
+TestResults/
 
 ## Ignore Rider-specific files
 .idea/
@@ -53,6 +54,12 @@ TestResults/
 *.cache
 *.DS_Store
 Thumbs.db
+
+## NuGet artifacts
+packages/
+.nuget/
+*.nupkg
+*.snupkg
 
 ## Ignore global config override
 appsettings.Development.json

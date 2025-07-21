@@ -2,8 +2,8 @@
 
 namespace SimpleRESTful.Application.Employees.DTOs.Response
 {
-    public class GetEmployeesResponseDTO : Response
+    public class UpdateEmployeeResponse : Response
     {
-        public IEnumerable<EmployeeModel>? Data { get; set; }
+        public EmployeeModel? Data { get; set; }
     }
 }

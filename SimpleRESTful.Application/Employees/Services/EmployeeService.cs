@@ -16,9 +16,9 @@ namespace SimpleRESTful.Application.Employees.Services
             this.service = service;
         }
 
-        public async Task<CreateEmployeeResponseDTO> CreateEmployeeAsync(CreateEmployeeRequest request)
+        public async Task<CreateEmployeeResponse> CreateEmployeeAsync(CreateEmployeeRequest request)
         {
-            var response = new CreateEmployeeResponseDTO();
+            var response = new CreateEmployeeResponse();
 
             try
             {
@@ -60,9 +60,9 @@ namespace SimpleRESTful.Application.Employees.Services
             return response;
         }
 
-        public async Task<GetEmployeeByIdResponseDTO> GetEmployeeByIdAsync(int id)
+        public async Task<GetEmployeeByIdResponse> GetEmployeeByIdAsync(int id)
         {
-            var response = new GetEmployeeByIdResponseDTO();
+            var response = new GetEmployeeByIdResponse();
 
             try
             {
@@ -85,9 +85,9 @@ namespace SimpleRESTful.Application.Employees.Services
             return response;
         }
 
-        public async Task<GetEmployeesResponseDTO> GetEmployeesAsync()
+        public async Task<GetEmployeesResponse> GetEmployeesAsync()
         {
-            var response = new GetEmployeesResponseDTO();
+            var response = new GetEmployeesResponse();
 
             try
             {
@@ -101,9 +101,9 @@ namespace SimpleRESTful.Application.Employees.Services
             return response;
         }
 
-        public async Task<UpdateEmployeeResponseDTO> UpdateEmployeeAsync(UpdateEmployeeRequest request)
+        public async Task<UpdateEmployeeResponse> UpdateEmployeeAsync(UpdateEmployeeRequest request)
         {
-            var response = new UpdateEmployeeResponseDTO();
+            var response = new UpdateEmployeeResponse();
 
             try
             {

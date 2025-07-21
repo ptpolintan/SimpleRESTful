@@ -2,7 +2,7 @@
 
 namespace SimpleRESTful.Application.Employees.DTOs.Response
 {
-    public class CreateEmployeeResponseDTO : Response
+    public class GetEmployeeByIdResponse : Response
     {
         public EmployeeModel? Data { get; set; }
     }

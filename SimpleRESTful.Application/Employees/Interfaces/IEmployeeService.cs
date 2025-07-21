@@ -5,10 +5,10 @@ namespace SimpleRESTful.Application.Employees.Interfaces
 {
     public interface IEmployeeService
     {
-        Task<GetEmployeesResponseDTO> GetEmployeesAsync();
-        Task<GetEmployeeByIdResponseDTO> GetEmployeeByIdAsync(int id);
-        Task<CreateEmployeeResponseDTO> CreateEmployeeAsync(CreateEmployeeRequest request);
-        Task<UpdateEmployeeResponseDTO> UpdateEmployeeAsync(UpdateEmployeeRequest request);
+        Task<GetEmployeesResponse> GetEmployeesAsync();
+        Task<GetEmployeeByIdResponse> GetEmployeeByIdAsync(int id);
+        Task<CreateEmployeeResponse> CreateEmployeeAsync(CreateEmployeeRequest request);
+        Task<UpdateEmployeeResponse> UpdateEmployeeAsync(UpdateEmployeeRequest request);
         Task<Response> DeleteEmployeeAsync(int id);
     }
 }

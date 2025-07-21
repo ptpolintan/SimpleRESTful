@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRESTful.Domain", "Sim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRESTful.Application", "SimpleRESTful.Application\SimpleRESTful.Application.csproj", "{9AB50109-CAD2-41AD-39B5-1DE9E4F547C7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRESTful.API.Test", "SimpleRESTful.API.Test\SimpleRESTful.API.Test.csproj", "{AC77AD71-85C6-446B-AFF9-C94A838EFC3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +37,16 @@ Global
 		{9AB50109-CAD2-41AD-39B5-1DE9E4F547C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AB50109-CAD2-41AD-39B5-1DE9E4F547C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AB50109-CAD2-41AD-39B5-1DE9E4F547C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC77AD71-85C6-446B-AFF9-C94A838EFC3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC77AD71-85C6-446B-AFF9-C94A838EFC3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC77AD71-85C6-446B-AFF9-C94A838EFC3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC77AD71-85C6-446B-AFF9-C94A838EFC3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AC77AD71-85C6-446B-AFF9-C94A838EFC3A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5E9E44FD-993F-4E05-9304-1BA1B0C67612}

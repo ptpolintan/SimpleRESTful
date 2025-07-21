@@ -8,7 +8,7 @@ namespace SimpleRESTful.API.Extensions
     public static class EmployeeExtensions
     {
         //all the 404 are for the sake of errors for now. can design an even better design based on what error will be thrown beyond the controller layer
-        public static ObjectResult AsHttpResponse(this GetEmployeesResponseDTO response)
+        public static ObjectResult AsHttpResponse(this GetEmployeesResponse response)
         {
             response.TimeStamp = DateTime.UtcNow;
 
@@ -18,7 +18,7 @@ namespace SimpleRESTful.API.Extensions
             };
         }
 
-        public static ObjectResult AsHttpResponse(this GetEmployeeByIdResponseDTO response)
+        public static ObjectResult AsHttpResponse(this GetEmployeeByIdResponse response)
         {
             response.TimeStamp = DateTime.UtcNow;
 
@@ -28,7 +28,7 @@ namespace SimpleRESTful.API.Extensions
             };
         }
 
-        public static ObjectResult AsHttpResponse(this UpdateEmployeeResponseDTO response)
+        public static ObjectResult AsHttpResponse(this UpdateEmployeeResponse response)
         {
             response.TimeStamp = DateTime.UtcNow;
 
@@ -38,7 +38,7 @@ namespace SimpleRESTful.API.Extensions
             };
         }
 
-        public static ObjectResult AsHttpResponse(this CreateEmployeeResponseDTO response)
+        public static ObjectResult AsHttpResponse(this CreateEmployeeResponse response)
         {
             response.TimeStamp = DateTime.UtcNow;
 
