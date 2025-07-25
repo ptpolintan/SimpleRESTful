@@ -5,6 +5,6 @@ namespace SimpleRESTful.Infrastructure.Persistence.DbContext
 {
     public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : Microsoft.EntityFrameworkCore.DbContext(options)
     {
-        public DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
     }
 }

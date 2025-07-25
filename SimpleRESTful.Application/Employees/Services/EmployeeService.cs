@@ -4,6 +4,7 @@ using SimpleRESTful.Application.Employees.Errors;
 using SimpleRESTful.Application.Employees.Extensions;
 using SimpleRESTful.Application.Employees.Interfaces;
 using SimpleRESTful.Domain.Employees.Repository;
+using SimpleRESTful.Domain.Specifications.Employees;
 
 namespace SimpleRESTful.Application.Employees.Services
 {
@@ -19,6 +20,15 @@ namespace SimpleRESTful.Application.Employees.Services
         public async Task<CreateEmployeeResponse> CreateEmployeeAsync(CreateEmployeeRequest request)
         {
             var response = new CreateEmployeeResponse();
+
+            var employee = request.AsEntity();
+
+            var nameSpec = new ValidNameSpecification();
+            if (!nameSpec.IsSatisfiedBy(employee))
+            {
+                response.Fail(EmployeeErrors.CreateError);
+                return response;
+            }
 
             try
             {
@@ -105,13 +115,22 @@ namespace SimpleRESTful.Application.Employees.Services
         {
             var response = new UpdateEmployeeResponse();
 
+            var employee = request.AsEntity();
+
+            var nameSpec = new ValidNameSpecification();
+            if (!nameSpec.IsSatisfiedBy(employee))
+            {
+                response.Fail(EmployeeErrors.UpdateError);
+                return response;
+            }
+
             try
             {
                 var result = await service.UpdateAsync(request.AsEntity());
 
                 if (result is null)
                 {
-                    response.Fail(EmployeeErrors.UpdateError);
+                    response.Fail(EmployeeErrors.NotFound);
                 }
 
                 response.Data = result?.AsDTO();

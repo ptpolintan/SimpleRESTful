@@ -10,6 +10,7 @@ using SimpleRESTful.Application.Employees.Interfaces;
 
 namespace SimpleRESTful.API.Test.Controllers
 {
+    [TestFixture]
     public class Tests
     {
         private EmployeesController _controller;
@@ -118,7 +119,7 @@ namespace SimpleRESTful.API.Test.Controllers
         public async Task CreateEmployee_ShouldReturn201_WhenSuccessful()
         {
             // Arrange
-            var webRequest = new CreateEmployeeWebRequest { FirstName = "John", LastName = "Doe" };
+            var webRequest = new CreateEmployeeWebRequest { FirstName = "John", MiddleName = "Mid", LastName = "Doe" };
             _serviceMock.Setup(s => s.CreateEmployeeAsync(It.IsAny<CreateEmployeeRequest>()))
                 .ReturnsAsync(new CreateEmployeeResponse
                 {
